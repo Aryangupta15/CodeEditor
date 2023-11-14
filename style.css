@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Roboto:wght@500&family=Signika+Negative:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Signika Negative", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* background-image: url(background.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+#loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  animation: anim2 1s cubic-bezier(0.19, 1, 0.22, 1) 5s both;
+}
+
+#wrapperload{
+  width: 500px;
+  height: 100px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+#wrapperload .elem{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  display: flex;
+  color: #4643E7;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* background-color: #efefef; */
+}
+
+
+#wrapperload .elem:nth-child(1){
+  animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 1s both;
+}
+
+#wrapperload .elem:nth-child(2){
+  animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 3s both;
+}
+
+#wrapperload .elem:nth-child(3){
+  animation: anim 2s cubic-bezier(0.19, 1, 0.22, 1) 5s both;
+}
+
+@keyframes anim{
+  to{
+      margin-top: -100px;
+  }
+}
+
+@keyframes anim2{
+  to{
+      transform: translateY(-100%);
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10%;
+  width: 100%;
+  background-color: #e9d7f9;
+  color: rgb(0, 0, 0);
+}
+
+.nv1{
+    margin: 0px 3%;
+
+}
+
+.nv1 p,h1 span{
+  color: #8a2be2;
+}
+
+.nv1 p{
+  font-weight: 600;
+}
+
+.container{
+  background-color: rgb(16, 16, 16);
+  height: 90%;
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+}
+
+.left,.right{
+  /* border: 1px solid blue; */
+  height: 100%;
+  width: 50%;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+}
+
+.code_section{
+  height: calc(100%/3);
+  width: 100%;
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  resize: vertical;
+}
+
+label{
+  width: 100%;
+  min-height: 9%;
+  margin-left: 3%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5%;
+}
+
+textarea{
+  /* margin-top: 1.5%; */
+  padding: 15px;
+  font-weight: 300;
+  font-size: medium;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  width: 100%;
+  height: 91%;
+  cursor: crosshair;
+}
+
+textarea::selection{
+  color: #efff;
+  background-color: #000;
+}
+
+h2{
+  background-color: #000;
+  text-align: center;
+  height: 5%;
+  width: 100%;
+  color: #fff;
+}
+
+#output{
+  width: 100%;
+  height: 94%;
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+  outline: none;
+  word-wrap: keep-all;
+}
+
+#output::selection{
+  color: #efff;
+  background-color: #000;
+}
+
+#RunBtn{
+  height: 50%;
+  width: 6vw;
+  border: none;
+  border: 1px solid #8a2be2;
+  border-bottom: 3px solid black;
+  border-right: 4px solid black;
+  color: #8a2be2;
+  border-radius: 3px;
+  outline: none;
+  margin: 0px 3%;
+  background-color: #f0dfff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  font-weight: 600;
+  cursor:not-allowed;
+}
+
+#RunBtn:active{
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+/* Responsive Code */
+
+@media (min-width: 340px) and (max-width: 1024px) {
+
+  html,body{
+    height: 250vh;
+  }
+
+  nav{
+    height: 5%;
+  }
+
+  #RunBtn{
+    height: 50%;
+    width: 20%;
+    font-size: 13px;
+    gap: 5%;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .right{
+    width: 100%;
+    height: 50%;
+  }
+
+  #output{
+    height: 100%;
+    width: 100%;
+    padding: 3%;
+    word-wrap: break-all;
+  }
+}

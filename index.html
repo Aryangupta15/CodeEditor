@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icons8-code-16.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- page loder -->
+    <div id="loader">
+      <div id="wrapperload">
+        <div class="elem">
+          <h3>hello Everyone.</h3>
+        </div>
+        <div class="elem">
+          <h3>Welcome to the website.</h3>
+        </div>
+        <div class="elem">
+          <h3>Made with ❤️ by Aryan!</h3>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <div class="nv1">
+        <h1>
+          <i class="fa-solid fa-code" style="color: #8a2be2"></i>CODE<span
+            >Zone</span
+          >
+        </h1>
+        <p>Online Code Editor</p>
+      </div>
+
+      <button id="RunBtn" onclick="speak()">
+        <i class="fa-solid fa-play" style="color: #8a2be2"></i>RUN
+      </button>
+    </nav>
+
+    <div class="container">
+      <div class="left">
+        <div id="html_section" class="code_section">
+          <label><i class="fa-brands fa-html5"></i>HTML</label>
+          <textarea id="HTML_code" onkeyup="run()"></textarea>
+        </div>
+
+        <div id="css_section" class="code_section">
+          <label><i class="fa-brands fa-css3-alt"></i>CSS</label>
+          <textarea id="CSS_code" onkeyup="run()"></textarea>
+        </div>
+
+        <div id="js_section" class="code_section">
+          <label><i class="fa-brands fa-css3-alt"></i>JAVASCRIPT</label>
+          <textarea id="JS_code" onkeyup="run()"></textarea>
+        </div>
+      </div>
+
+      <div class="right">
+        <h2>OUTPUT</h2>
+        <iframe id="output"></iframe>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/12bde67e27.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
