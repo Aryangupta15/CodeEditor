@@ -10,7 +10,7 @@ function run(){
 }
 
 function speak(){
-    var msg = "This Button is disabled You ASSHOLE";
+    var msg = "This Button is disabled.";
     let utterancy = new SpeechSynthesisUtterance(msg);
     msg.volume = 1;
     msg.rate = 1;
